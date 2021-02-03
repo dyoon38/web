@@ -1,0 +1,41 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+
+
+  // desktop
+  @include mq("desktop-big") {
+    height: 20rem;
+
+    .footer-icon {
+      width: 298px;
+      height: 78px;
+    }
+
+    .footer-text {
+      @include fontsize-weight(1.4rem, 400);
+      text-align: left;
+      color: $light-grey1;
+      margin-left: 14rem;
+    }
+  }
+
+  // mobile
+  @include mq("mobile") {
+    flex-direction: column;
+
+    .footer-icon > img {
+      width: 200px;
+      height: auto;
+    }
+
+    .footer-text {
+      @include fontsize-weight(1.4rem, 400);
+      text-align: center;
+      color: $light-grey1;
+      margin-top: 16px;
+    }
+  }
+}
